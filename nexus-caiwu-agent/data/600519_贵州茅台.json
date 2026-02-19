@@ -1,0 +1,213 @@
+{
+  "stock_code": "600519",
+  "stock_name": "贵州茅台",
+  "key_metrics": {
+    "revenue_billion": 1309.0388963488,
+    "net_profit_billion": 668.9880474617,
+    "net_profit_margin": 51.11,
+    "total_assets_billion": 3047.3818492985997,
+    "total_liabilities_billion": 390.3316005701,
+    "debt_ratio": 12.81,
+    "gross_margin": 68.35,
+    "operating_margin": 68.36,
+    "roe": 25.18,
+    "roa": 21.95,
+    "equity_multiplier": 1.15,
+    "asset_turnover": 0.43,
+    "ocf_to_np": 0.57,
+    "free_cash_flow_billion": 359.14,
+    "operating_cash_flow_billion": 381.97
+  },
+  "analysis": {
+    "profitability": {
+      "net_margin": "优秀 (ROE>15%)",
+      "roe": "25.18%",
+      "roa": "21.95%",
+      "gross_margin": "68.35%"
+    },
+    "solvency": {
+      "debt_level": "低风险 (负债率<40%)",
+      "current_ratio": null,
+      "quick_ratio": null
+    },
+    "efficiency": {
+      "asset_turnover": "较低 (周转率0.3-0.5)",
+      "turnover_value": 0.43
+    },
+    "cashflow": {
+      "quality": "需关注 (现金流/净利润 0.5-0.8)",
+      "ocf_to_np": 0.57,
+      "free_cash_flow_billion": 359.14
+    },
+    "dupont": {
+      "net_margin": 51.11,
+      "asset_turnover": 0.43,
+      "equity_multiplier": 1.15,
+      "roe_dupont": 0.25
+    },
+    "recommendations": [
+      "财务状况良好",
+      "财务状况一般，建议深入分析薄弱环节",
+      "需关注: 毛利率, 总资产周转率"
+    ]
+  },
+  "health_score": 71,
+  "health_details": {
+    "profitability": {
+      "score": 25,
+      "max": 25,
+      "detail": "优秀 (ROE>15%)"
+    },
+    "solvency": {
+      "score": 25,
+      "max": 25,
+      "detail": "低风险 (负债率<40%)"
+    },
+    "efficiency": {
+      "score": 5,
+      "max": 20,
+      "detail": "较低 (周转率0.3-0.5)"
+    },
+    "growth": {
+      "score": 12,
+      "max": 15,
+      "detail": "良好 (需历史数据确认)"
+    },
+    "cashflow": {
+      "score": 4,
+      "max": 15,
+      "detail": "需关注 (现金流/净利润 0.5-0.8)"
+    }
+  },
+  "risk_level": "中低风险",
+  "dupont_analysis": {
+    "net_margin": 51.11,
+    "asset_turnover": 0.43,
+    "equity_multiplier": 1.15,
+    "roe_dupont": 0.25
+  },
+  "fetch_time": "2026-02-17T17:55:47.100205",
+  "industry": {
+    "id": "consumer",
+    "name": "消费品",
+    "name_en": "Consumer Goods",
+    "description": "食品、饮料、白酒、医药、纺织、日化等"
+  },
+  "industry_analysis": {
+    "industry": {
+      "id": "consumer",
+      "name": "消费品",
+      "name_en": "Consumer Goods",
+      "description": "食品、饮料、白酒、医药、纺织、日化等"
+    },
+    "dimension_scores": {
+      "gross_margin": {
+        "score": 18.44,
+        "weighted_score": 3.69,
+        "rating": "差",
+        "value": 68.35,
+        "industry_range": "25-70",
+        "industry_ideal": 50,
+        "name_cn": "毛利率"
+      },
+      "net_margin": {
+        "score": 58.7,
+        "weighted_score": 11.74,
+        "rating": "一般",
+        "value": 51.11,
+        "industry_range": "8-30",
+        "industry_ideal": 18,
+        "name_cn": "净利率"
+      },
+      "roe": {
+        "score": 72.35,
+        "weighted_score": 21.7,
+        "rating": "良好",
+        "value": 25.18,
+        "industry_range": "12-35",
+        "industry_ideal": 22,
+        "name_cn": "净资产收益率(ROE)"
+      },
+      "roa": {
+        "score": 91.12,
+        "weighted_score": 9.11,
+        "rating": "优秀",
+        "value": 21.95,
+        "industry_range": "6-20",
+        "industry_ideal": 12,
+        "name_cn": "总资产收益率(ROA)"
+      },
+      "debt_ratio": {
+        "score": 85.4,
+        "weighted_score": 8.54,
+        "rating": "优秀",
+        "value": 12.81,
+        "industry_range": "15-50",
+        "industry_ideal": 28,
+        "name_cn": "资产负债率"
+      },
+      "asset_turnover": {
+        "score": 20.0,
+        "weighted_score": 2.0,
+        "rating": "较差",
+        "value": 0.43,
+        "industry_range": "0.4-1.2",
+        "industry_ideal": 0.75,
+        "name_cn": "总资产周转率"
+      }
+    },
+    "raw_score": 56.78,
+    "normalized_score": 56.78,
+    "max_score": 100.0,
+    "adjustment_factor": 1.0,
+    "adjustment_notes": [],
+    "risk_level": "中等风险",
+    "risk_class": "medium",
+    "industry_comparison": {
+      "gross_margin": {
+        "company_value": 68.35,
+        "industry_ideal": 50,
+        "difference": 18.35,
+        "difference_pct": 36.7,
+        "status": "above",
+        "status_cn": "优于"
+      },
+      "roe": {
+        "company_value": 25.18,
+        "industry_ideal": 22,
+        "difference": 3.18,
+        "difference_pct": 14.45,
+        "status": "above",
+        "status_cn": "优于"
+      },
+      "roa": {
+        "company_value": 21.95,
+        "industry_ideal": 12,
+        "difference": 9.95,
+        "difference_pct": 82.92,
+        "status": "above",
+        "status_cn": "优于"
+      },
+      "debt_ratio": {
+        "company_value": 12.81,
+        "industry_ideal": 28,
+        "difference": -15.19,
+        "difference_pct": -54.25,
+        "status": "below",
+        "status_cn": "低于"
+      },
+      "asset_turnover": {
+        "company_value": 0.43,
+        "industry_ideal": 0.75,
+        "difference": -0.32,
+        "difference_pct": -42.67,
+        "status": "below",
+        "status_cn": "低于"
+      }
+    },
+    "recommendations": [
+      "财务状况一般，建议深入分析薄弱环节",
+      "需关注: 毛利率, 总资产周转率"
+    ]
+  }
+}

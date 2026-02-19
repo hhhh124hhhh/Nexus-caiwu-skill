@@ -1,0 +1,30 @@
+{
+  "_comment": "网络配置文件示例 - 复制为 network.json 并根据需要修改",
+
+  "mode": "auto",
+  "_mode_options": "auto=自动检测, direct=国内直连, proxy=使用代理",
+
+  "proxy": {
+    "http": null,
+    "https": null,
+    "socks5": null,
+    "_examples": {
+      "http_proxy": "http://127.0.0.1:7890",
+      "socks5_proxy": "socks5://127.0.0.1:1080"
+    }
+  },
+
+  "timeout": 30,
+  "_timeout_note": "请求超时时间（秒）",
+
+  "retry": 3,
+  "_retry_note": "失败重试次数",
+
+  "retry_delay": 2,
+  "_retry_delay_note": "重试延迟（秒），每次重试延迟递增",
+
+  "verify_ssl": true,
+  "_verify_ssl_note": "是否验证 SSL 证书",
+
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+}
