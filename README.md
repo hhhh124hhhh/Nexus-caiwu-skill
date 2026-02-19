@@ -8,7 +8,6 @@ A股市场智能财务分析技能，作为 [Nexus-caiwu-agent](https://github.c
 - **多维度分析** - 杜邦分析、现金流分析、五维度健康评估
 - **智能报告生成** - D3.js 交互式 HTML 报告
 - **PPT 自动生成** - 基于百度 AI 的精美 PPT 生成
-- **视频生成框架** - Remotion 视频生成框架
 
 ## 支持的市场
 
@@ -23,7 +22,6 @@ A股市场智能财务分析技能，作为 [Nexus-caiwu-agent](https://github.c
 ### 环境要求
 
 - Python 3.8+
-- Node.js 16+（视频生成功能）
 
 ### 安装
 
