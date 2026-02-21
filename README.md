@@ -6,6 +6,7 @@ A股市场智能财务分析技能，作为 [Nexus-caiwu-agent](https://github.c
 
 - **财务数据获取** - 支持 A 股全市场股票数据获取
 - **多维度分析** - 杜邦分析、现金流分析、五维度健康评估
+- **多公司对比** - 支持多家公司财务指标对比分析，生成可视化报告
 - **智能报告生成** - D3.js 交互式 HTML 报告
 - **PPT 自动生成** - 基于百度 AI 的精美 PPT 生成
 
@@ -40,6 +41,8 @@ npm install
 
 ### 使用示例
 
+#### 单股分析
+
 ```bash
 # 分析股票
 python nexus-caiwu-agent/scripts/fetch_data.py 600519 贵州茅台 --analyze
@@ -50,6 +53,59 @@ python nexus-caiwu-agent/scripts/fetch_data.py 600519 --analyze --save
 # 生成 PPT（需要 BAIDU_API_KEY）
 export BAIDU_API_KEY=your_api_key
 python nexus-caiwu-agent/scripts/fetch_data.py 600519 --ai-ppt
+```
+
+#### 多公司对比分析
+
+```python
+from nexus-caiwu-agent.scripts.comparison_template import generate_comparison_html_report
+
+# 准备对比数据
+companies = [
+    {
+        "stock_code": "601668",
+        "stock_name": "中国建筑",
+        "key_metrics": {
+            "revenue_billion": 15582.20,
+            "net_profit_billion": 493.42,
+            "net_profit_margin": 3.17,
+            "roe": 6.04,
+            "debt_ratio": 76.07,
+            "ending_cash_billion": 3039.69,
+        },
+        "health_score": 60,
+        "risk_level": "中等风险"
+    },
+    {
+        "stock_code": "601186",
+        "stock_name": "中国铁建",
+        "key_metrics": {
+            "revenue_billion": 7284.03,
+            "net_profit_billion": 172.29,
+            "net_profit_margin": 2.37,
+            "roe": 4.0,
+            "debt_ratio": 79.14,
+            "ending_cash_billion": 1541.45,
+        },
+        "health_score": 52,
+        "risk_level": "中等风险"
+    },
+]
+
+# 可选：添加行业和宏观数据
+industry_data = {"total_output": "32万亿", "new_infrastructure_ratio": "40%"}
+macro_data = {"gdp": "140.19万亿", "gdp_growth": "+5.0%"}
+
+# 生成对比报告
+html = generate_comparison_html_report(
+    companies,
+    industry_data=industry_data,
+    macro_data=macro_data
+)
+
+# 保存报告
+with open("comparison_report.html", "w", encoding="utf-8") as f:
+    f.write(html)
 ```
 
 ## 分析框架
@@ -79,16 +135,28 @@ python nexus-caiwu-agent/scripts/fetch_data.py 600519 --ai-ppt
 ```
 nexus-caiwu-skill/
 ├── nexus-caiwu-agent/
-│   ├── scripts/           # 核心脚本
-│   │   ├── fetch_data.py  # 数据获取与分析
+│   ├── scripts/                  # 核心脚本
+│   │   ├── fetch_data.py         # 数据获取与分析
+│   │   ├── comparison_template.py # 多公司对比报告模板
 │   │   ├── ppt_generator.py
 │   │   └── baidu_skills_wrapper.py
-│   ├── skills/            # 子技能
+│   ├── skills/                   # 子技能
 │   │   └── ai-ppt-generator/
-│   ├── references/        # 参考文档
-│   └── docs/              # 文档
+│   ├── references/               # 参考文档
+│   └── docs/                     # 文档
+├── CONTRIBUTING.md
+├── LICENSE
 └── README.md
 ```
+
+## 对比报告特性
+
+多公司对比报告生成器 (`comparison_template.py`) 提供：
+
+- **完全离线** - 纯 SVG 图表，无外部 CDN 依赖
+- **A股配色** - 红涨绿跌，符合国内投资者习惯
+- **独立图表** - 收入对比、利润对比、ROE 排名、现金分布
+- **响应式设计** - 支持手机、平板、电脑多端查看
 
 ## 相关项目
 
