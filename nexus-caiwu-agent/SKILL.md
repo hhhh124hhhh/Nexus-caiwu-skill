@@ -67,6 +67,50 @@ python scripts/fetch_data.py 600519 贵州茅台 --analyze --save
 
 完整版包装器，需要先克隆原始项目。适合需要完整功能的场景。
 
+### scripts/comparison_template.py **[NEW]**
+
+**多公司对比分析报告模板**，生成完全离线的对比分析HTML报告。
+
+```python
+from scripts.comparison_template import generate_comparison_html_report
+
+# 准备对比数据
+companies = [
+    {
+        "stock_code": "601668",
+        "stock_name": "中国建筑",
+        "key_metrics": {
+            "revenue_billion": 15582.20,
+            "net_profit_billion": 493.42,
+            "roe": 6.04,
+            ...
+        }
+    },
+    ...
+]
+
+# 可选的行业和宏观数据
+industry_data = {"total_output": "32万亿", ...}
+macro_data = {"gdp": "140.19万亿", ...}
+
+# 生成对比报告
+html = generate_comparison_html_report(
+    companies,
+    industry_data=industry_data,
+    macro_data=macro_data
+)
+
+# 保存报告
+with open("comparison_report.html", "w", encoding="utf-8") as f:
+    f.write(html)
+```
+
+**特性**：
+- 完全离线（无外部CDN依赖）
+- A股配色习惯（红涨绿跌）
+- 响应式设计（手机/平板/电脑）
+- 图表：收入对比、利润对比、ROE排名、现金分布
+
 ## 核心能力
 
 - **财务比率计算**：盈利能力、偿债能力、运营效率、成长能力、现金流质量
